@@ -15,7 +15,7 @@
 
 ###### Copy the repository on you computer:
 ```
-git clone https://github.com/PoMaHcKu/dev-inc-c-server
+git clone https://github.com/DevIncubator/New-Server
 ```
 ###### Create index.html file in the root of project directory. The file must has a html form with post method. And form must has a input element (or input area) with attribute name and submit button in the html form.
 ###### Edit file script.cpp. There is the function called getInt in the script file. Write your code in this function.
@@ -32,7 +32,7 @@ git clone https://github.com/PoMaHcKu/dev-inc-c-server
 ###### Set really credit card, type address of credit card or mark "Credit or debit card address is same as above" -> press "START MY FREE TRIAL"
 ###### Press "Marketplace" -> type "docker" -> search "Docker Engine Community on Ubuntu 18.04 LTS" -> Press "Launch" -> Mark "I accept..." -> Press "Deploy".
 ###### Press "Menu |||" -> "Home" -> "Dashboard" -> Click on "Compute engine" in Resources section -> click on your instance -> click on SSH (section remote access). Window with terminal will be open.
-###### To check all our dependencies type follow commands:
+###### To check all our dependencies type follow commands. For example:
 ```docker --version``` output ```Docker version 19.03.12, build 48a66213fe```
 ```git --version``` output ```git version 2.17.1```
 ###### Press "Menu |||" -> "Home" -> "Dashboard" -> Click on "Compute engine" in Resources section -> Press "Set up firewall rules"
@@ -40,7 +40,7 @@ git clone https://github.com/PoMaHcKu/dev-inc-c-server
 
 ### 3. Deploy
 ###### Go to your git-repository and copy repository url
-###### Enter in terminal command ```git clone <repository-url>```, where <repository-url> is your url (format is "https://github.com/username/reponame/").
+###### Type in terminal (terminal opened after the step 2 of this instruction) a command ```git clone <repository-url>```, where <repository-url> is your url (format is "https://github.com/username/reponame/").
 ###### Command "ls" show directories and files in the current directory, command "cd" move you in the selected directory.
 ###### Type ```cd dirname``` for go to the repository directory.
 ###### Now, open Dashboard (don't close terminal) and select you instance in resources section. Copy the external ip address.
@@ -53,5 +53,10 @@ sudo docker run -d -p 8080:80 app:1.0
 ```
 ###### Port 8080 must be free, or write another port in the command.
 ###### Type in browser ```http:<external_ip>:8080/``` for check app.
+
+*For stop project - type follow commands:*
+```sudo docker ps -a```
+*copy container name (last colunm of output of the command).*
+*Type* ```sudo docker stop <container_name>``` *, where <container_name> is a name of the container.*
 
 #### Congratulations - app is working!!!
