@@ -3,91 +3,45 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width"/>
-    <title>Antiplagiat Powered by Dev Incubator</title>
+    <title>text.AI</title>
+    <link rel="shortcut icon" href="./assets/images/brain.png" type="image/png">
     <link href="https://fonts.googleapis.com/css?family=Sofia" rel="stylesheet"/>
-    <style type="text/css">
-      body {
-	      background-size: cover;
-	      background-repeat: no-repeat;
-	      background-attachment: fixed;
-	      font-family: "Sofia";
-	      font-size: 20px;
-	      color: BurlyWood;
-      }
-
-      section {
-	      padding: 15px;
-	      max-width: 600px;
-      }
-
-      h3 {
-	      text-align: center;
-      }
-
-      h1 {
-	      text-shadow: 2px 2px DarkSlateGray;
-	      padding: 30px;
-	      margin-bottom: 5px;
-	      margin-left: 30px;
-      }
-
-      h2 {
-	      text-shadow: 2px 2px DarkSlateGray;
-	      padding: 1px;
-	      font-size: 50px;
-	      margin-left: 30px;
-      }
-
-      h6 {
-	      text-shadow: 2px 2px DarkSlateGray;
-	      padding: 1px;
-	      font-size: 50px;
-	      margin-left: 30px;
-      }
-
-      form {
-	      margin: 0 auto;
-	      width: 60%;
-	      padding-top: 5px;
-      }
-
-      input[type="text"],
-      textarea {
-	      width: 100%;
-	      padding: 7px 10px;
-	      margin-bottom: 5px;
-	      display: inline-block;
-	      border: 1px dotted LightSeaGreen;
-	      border-radius: 4px;
-	      box-sizing: border-box;
-      }
-
-      input[type="submit"] {
-	      width: 100%;
-	      background: DarkSlateGray;
-	      color: BurlyWood;
-	      padding: 10px 20px;
-	      border-radius: 4px;
-	      cursor: pointer;
-      }
-    </style>
+    <link href="./style.css" rel="stylesheet"/>
   </head>
-  <body style="background-image: url('https://images.pexels.com/photos/348688/pexels-photo-348688.jpeg?cs=srgb&dl=pexels-jatuphon-buraphon-348688.jpg&fm=jpg');">
-    <header>
-      <h1>Welcome to the Dev Incubator</h1>
+  <body>
+    <header class="title">
+      <h1>text.AI</h1>
+      <p class="caption-front">A word processor with artificial intelligence elements </p>
+      <p class="caption-back" style="display: none;">The result of checking the text for uniqueness</p>
     </header>
-
-    <section id="contact">
-      <h3>Real AI powered by Dev Incubator</h3>
-      <form id="contactForm" action="http://34.106.8.168:8080/cgi-bin/script.cgi">
-        <label for="name">Text:</label><br/>
-        <textarea id="name"
-                  name="name"
-                  placeholder="Some text..."
+    <section id="check-area">
+      <form id="check-form" >
+        <textarea id="text"
+                  name="text"
+                  placeholder="Enter text here to check for uniqueness"
         ></textarea>
-        <br/><br/>
-        <input type="submit" value="Submit"/>
+        <div class="select-type">
+          <button id="check-type" value=""></button>
+          <ul id="type-picker">
+            <li value="uniqueness" data-thumbnail="./assets/images/uniqueness.png">Uniqueness</li>
+            <li value="repetition" data-thumbnail="./assets/images/repetition.png">Repetition</li>
+            <li value="misprint" data-thumbnail="./assets/images/misprint.png">Misprint</li>
+            <li value="validation" data-thumbnail="./assets/images/validation.png">Validation</li>
+          </ul>
+        </div>
+        <button id='check-button' type="">Check</button>
       </form>
+      <img class="card" src="./assets/images/card.png" alt="card">
     </section>
+    <section id="check-result" style="display: none;">Result</section>
+    <footer id="footer">
+      <a href="http://devincubator.by/"><img class="incubator-logo" src="./assets/images/incubator-logo.png" alt="incubator-logo"></a>
+      <p>Larkgronick, 2021</p>
+      <span class="socials">
+        <a href="https://github.com/Larkgronick"><img src="./assets/images/icon-github.png" alt="larkgronick-github"></a> 
+        <a href="https://vk.com/larkgronick"><img src="./assets/images/icon-vk.png" alt="larkgronick-vk"></a> 
+      </span>
+    </footer>
+    <script src="./script.js"></script>
   </body>
 </html>
