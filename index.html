@@ -16,24 +16,30 @@
     </header>
     <section id="check-area">
       <form id="check-form" >
-        <textarea id="text"
-                  name="text"
-                  placeholder="Enter text here to check for uniqueness"
-        ></textarea>
-        <div class="select-type">
-          <button id="check-type" value=""></button>
-          <ul id="type-picker">
-            <li value="uniqueness" data-thumbnail="./assets/images/uniqueness.png">Uniqueness</li>
-            <li value="repetition" data-thumbnail="./assets/images/repetition.png">Repetition</li>
-            <li value="misprint" data-thumbnail="./assets/images/misprint.png">Misprint</li>
-            <li value="validation" data-thumbnail="./assets/images/validation.png">Validation</li>
-          </ul>
+        <textarea id="text" name="text" placeholder="Enter text here to check for uniqueness"></textarea>
+        <div class="check-buttons">
+          <div class="select-type">
+            <button id="check-type" value=""></button>
+            <ul id="type-picker">
+              <li value="uniqueness" data-thumbnail="./assets/images/uniqueness.png">Uniqueness</li>
+              <li value="repetition" data-thumbnail="./assets/images/repetition.png">Repetition</li>
+              <li value="misprint" data-thumbnail="./assets/images/misprint.png">Misprint</li>
+              <li value="validation" data-thumbnail="./assets/images/validation.png">Validation</li>
+            </ul>
+          </div>
+          <button id='check-button' type="button">Check</button>
         </div>
-        <button id='check-button' type="">Check</button>
       </form>
-      <img class="card" src="./assets/images/card.png" alt="card">
+        <div id="scan-animation"></div>
+        <img class="card" src="./assets/images/card.png" alt="card">
     </section>
-    <section id="check-result" style="display: none;">Result</section>
+    <section id="check-result" style="display: none;">
+      <div class="result-field">
+        <img src="./assets/images/brain.png" alt="brain">
+        <div class="result-text">Your text is <div id="result"></div>% unique</div>
+      </div>
+      <button id="back-button">Back</button>
+    </section>
     <footer id="footer">
       <a href="http://devincubator.by/"><img class="incubator-logo" src="./assets/images/incubator-logo.png" alt="incubator-logo"></a>
       <p>Larkgronick, 2021</p>

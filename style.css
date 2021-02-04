@@ -1,37 +1,31 @@
 @font-face {
     font-family: Exo2-Regular;
     src: url('./assets/fonts/Exo2-Regular.ttf');
-
 }
 
 @font-face {
     font-family: Exo2-Bold;
     src: url('./assets/fonts/Exo2-Bold.ttf');
-
 }
-
 
 *{
     margin: 0;
     padding: 0;
     outline: none;
-
 }
 
 body {
     width: 1024px;
+    height: 100vh;
     margin: 0 auto;
-    font-family: 'Exo2-Regular';
     color: #fff;
     background: url('./assets/images/desktop-background.png') no-repeat;
-    background-position:  50% 0%;
-
+    background-size: cover;
 }
 
 .title{
-    font-family: 'Exo2-Bold';
     text-align: center;
-
+    font-family: 'Exo2-Bold';
 }
 
 h1{
@@ -47,131 +41,282 @@ h1{
 
 #check-area{
     display: flex;
-    /* flex-wrap: wrap; */
-    position: relative;
-    right: 7%;
-    margin-bottom: 133px;
+    justify-content: center;
+    margin-bottom: 105px;
 }
 
 #check-form{
     display: flex;
-    width: 700px;
     flex-wrap: wrap;
+    width: 700px;  
 }
 
 #text{
-    width: 534px;
-    height: 200px;
-    border: 2px solid black;
-    border-radius: 20px;
+    width: 533px;
+    height: 204px;
+    margin: 0 60px 31px 0;
     padding: 32px 0 0 23px;
-    margin: 0 56px 23px 0;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 20px; 
     resize: none;
 }
 
-
-.select-type{
-    display: block;
-}
-
 #check-type{
+    width: 320px;
+    height: 70px;
+    margin: 0 19px 35px 0;
+    padding: 0 60px 10px 0;
+    font-size: 24px;
     font-family: 'Exo2-Regular';
-    font-size: 80px;
-    width: 313px;
-    background: url('./assets/images/arrow.png') no-repeat;
-    background-size: 34px;
-    background-position: 97% 50%;
-    cursor: pointer;
-    list-style: none;
     border: 2px solid black;
     border-radius: 10px;
+    background: url('./assets/images/arrow.png') no-repeat;
     background-color: #fff;
-    padding: 10px 120px 10px 10px;
-    margin: 0 21px 35px 0;
-    font-size: 25px;
-    
-    
+    background-size: 34px;
+    background-position: 90% 50%;
+    cursor: pointer;
+    list-style: none;
 }
 
 #check-type img {
-    width: 30px;
     margin-right: 5px;
-
 }
 
-
-
 #type-picker {  
+    width: 310px;
     display: none;
     position: absolute;
     z-index: 1;
+    font-family: 'Exo2-Regular';
     color: black;
-    border: 2px solid black;
     background-color: #fff;
+    border: 2px solid black;
     border-radius: 10px;
-
 }
   
 #type-picker li {
-    font-size: 30px;
     padding: 10px;
+    font-size: 30px;
     cursor: pointer;
     list-style: none;
-
 }
   
 #type-picker li img {
     width: 40px;
-  
 }
 
-#check-button{
+.check-buttons{
+    display: flex;
+}
+
+#check-button, #back-button{
+    width: 224px;
+    height: 66px;
+    text-align: center;
     font-size: 30px;
     font-family: 'Exo2-Regular';
-    text-align: center;
-    background-color: #191F82;
     color: #fff;
-    height: 63px;
-    width: 224px;
+    background-color: #191F82;
     border: 1px solid black;
     border-radius: 10px;
     cursor: pointer;
 }
 
-#check-button:hover{
+#check-button:hover, #back-button:hover{
     background-color: #7B81E3;
-    
 }
 
-#check-button:active{
+#check-button:active, #back-button:active{
     background-color: #515596;
-    
 }
 
 .card{
-    height: 341px;
+    height: 342px;
 }
 
 footer{
+    width: 100%;
+    margin-left: 5%;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
     right: 7%;
-    width: 1120px;
-    display: flex;
-    justify-content: space-around;
-    background-color: #fff;
-    color: #5C5C5C;
-    font-size: 30px;
+    font-size: 20px;
     font-family: 'Exo2-Bold';
-    padding: 25px ;
+    color: #5C5C5C;
+    background-color: #fff;
     border: 1px solid black;
     border-radius: 10px;
 }
 
 .incubator-logo{
-    height: 50px;
+    height: 30px;
 }
 
 .socials img{
-    height: 50px;
+    height: 30px;
     padding: 0 10px;
+}
+
+#check-result{
+    display: flex;
+   justify-content: center;
+    flex-wrap: wrap;
+ 
+    margin-bottom: 130px;
+    text-align: center;
+}
+
+.result-field{
+    margin: 102px 0 48px 0;
+    width: 860px;
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 30px;
+    font-family: 'Exo2-Bold';
+    color: #5C5C5C;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.result-text {
+    display: flex;
+    font-size: 44px;
+    color: #191F82;
+}
+
+#result{
+    width: 80px;   
+}
+  
+.active
+{
+  width: 5px;
+  height: 332px;
+  background-color: #386488;
+  border-radius: 8px;
+  position:absolute;
+  top: 375px;
+  left: 53%;
+  z-index:2;
+  -moz-animation: active 2s infinite;
+  -webkit-animation: active 2s infinite;
+  animation: active 2s infinite;
+  -webkit-animation-direction: alternate-reverse;
+  box-shadow:0px 0px 30px #d9fefc;
+  
+}
+
+@-webkit-keyframes active {
+  0%, 100% {
+    -webkit-transform: translateX();
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(470px);
+    transform: translateX(470px);
+  }
+}
+
+@media screen and (max-width: 1216px) {
+    #check-area{
+        flex-wrap: wrap;
+    }
+    #check-form{
+        justify-content: center;
+    }
+    #text{
+        margin: 0 0px 31px 0;
+    }
+    footer{
+        width: 70%;
+        right: 0%;
+        left: 8%;
+    }
+    .active
+    {
+        top: 752px;
+        left: 18%;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    body{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 758px) {
+    .caption-front, .caption-back{
+        font-size: 35px;
+        margin-bottom: 106px;
+    }
+    .result-text{
+        font-size: 35px;
+    }
+}
+  
+@media screen and (max-width: 758px) {  
+    .caption-front, .caption-back{
+        margin-bottom: 70px;
+    }
+    
+    #check-form{
+        order: 1;
+    }
+
+    .card{
+        width: 500px;
+        order: 0;
+        margin-bottom: 37px;
+        
+    }
+
+    .active{
+        height: 312px;  
+        top: 352px;
+        left: 8%;
+    }
+
+    #text{
+        width: 500px;
+    }
+
+    .check-buttons{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #check-type{
+        margin: 0 0 20px 0;
+    } 
+
+    #check-button{
+       width: 320px;
+    }
+
+    .result-field {
+        flex-wrap: wrap ;
+        margin: 48px 20px;
+    }
+    .result-field img {
+        width: 200px;
+        margin-bottom: 10px;
+    }
+
+    footer{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    footer p{
+        padding: 30px 66px;
+    }
 }
