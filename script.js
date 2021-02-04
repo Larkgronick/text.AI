@@ -1,7 +1,6 @@
 // here comes antiplagiathism result
 let uniqueness = 80;
 
-
 const result = document.getElementById('result');
 const list = document.getElementById('type-picker');
 const listElements = list.querySelectorAll('li');
