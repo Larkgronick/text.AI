@@ -22,12 +22,15 @@
             <button id="check-type" value=""></button>
             <ul id="type-picker">
               <li value="uniqueness" data-thumbnail="./assets/images/uniqueness.png">Uniqueness</li>
-              <li value="repetition" data-thumbnail="./assets/images/repetition.png">Repetition</li>
-              <li value="misprint" data-thumbnail="./assets/images/misprint.png">Misprint</li>
-              <li value="validation" data-thumbnail="./assets/images/validation.png">Validation</li>
+              <li value="repetition" data-thumbnail="./assets/images/repetition-disabled.png">Repetition</li>
+              <li value="misprint" data-thumbnail="./assets/images/misprint-disabled.png">Misprint</li>
+              <li value="validation" data-thumbnail="./assets/images/validation-disabled.png">Validation</li>
             </ul>
           </div>
-          <button id='check-button' type="button">Check</button>
+          <div class="popup">
+            <button id='check-button' type="button">Check</button>
+            <span class="popup-text" id="popup-message">Action in developement. Please, try another one...</span>
+          </div>
         </div>
       </form>
         <div id="scan-animation"></div>
